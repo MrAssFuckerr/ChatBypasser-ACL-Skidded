@@ -7,7 +7,7 @@ end
 task.wait(5)
 
 local ACL_LoadTime = tick()
-local NotificationTitle = "ChatBypasser's ACL"
+local NotificationTitle = "Cbb's ACL"
 
 local OldCoreTypeSettings = {}
 local WhitelistedCoreTypes = {
@@ -466,5 +466,5 @@ if CoreHook then
 end
 setreadonly(Metatable, true)
 
-Notify(NotificationTitle, "Anti Chat & Screenshot Logger Loaded!", 15)
-print(string.format("ChatBypasser's Anti Chat-Logger has loaded in %s seconds.", string.format("%.2f", tostring(tick() - ACL_LoadTime))))
+Notify(NotificationTitle, "Anti Chat & Screenshot Logger Loaded!", 1)
+print(string.format("Cbb's Anti Chat-Logger has loaded in %s seconds.", string.format("%.2f", tostring(tick() - ACL_LoadTime))))
