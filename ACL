@@ -4,7 +4,7 @@ if not game:IsLoaded() then
     game.Loaded:wait()
 end
 
-task.wait(5)
+task.wait(2)
 
 local ACL_LoadTime = tick()
 local NotificationTitle = "Cbb's ACL"
@@ -466,5 +466,5 @@ if CoreHook then
 end
 setreadonly(Metatable, true)
 
-Notify(NotificationTitle, "Anti Chat & Screenshot Logger Loaded!", 1)
+Notify(NotificationTitle, "Anti Chat & Screenshot Logger Loaded!", 4)
 print(string.format("Cbb's Anti Chat-Logger has loaded in %s seconds.", string.format("%.2f", tostring(tick() - ACL_LoadTime))))
