@@ -47,7 +47,7 @@ local PlayerGui = Player:FindFirstChildWhichIsA("PlayerGui") do
 end
 
 if getgenv().AntiChatLogger then
-    return Notify(NotificationTitle, "Anti Chat & Screenshot Logger already loaded!", 15)
+    return Notify(NotificationTitle, "Anti Chat & Screenshot Logger already loaded!", 4)
 else
     getgenv().AntiChatLogger = true
 end
