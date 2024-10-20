@@ -1,10 +1,10 @@
--- Credits: AnthonyIsntHere
+-- Credits: AnthonyIsntHere.
 
 if not game:IsLoaded() then
     game.Loaded:wait()
 end
 
-task.wait(2)
+task.wait(5)
 
 local ACL_LoadTime = tick()
 local NotificationTitle = "Cbb's ACL"
@@ -47,7 +47,7 @@ local PlayerGui = Player:FindFirstChildWhichIsA("PlayerGui") do
 end
 
 if getgenv().AntiChatLogger then
-    return Notify(NotificationTitle, "Anti Chat & Screenshot Logger already loaded!", 4)
+    return Notify(NotificationTitle, "Anti Chat & Screenshot Logger already loaded!", 15)
 else
     getgenv().AntiChatLogger = true
 end
@@ -304,7 +304,7 @@ end)
 
 if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
     WarningUI.Enabled = false
-    Reason_1.Visible = true
+    Reason_1.Visible = false
     return
 end
 
@@ -318,8 +318,8 @@ if not ChatMain then
     ChatMain = PlayerScripts:FindFirstChild("ChatMain", true)
     
     if not ChatMain then
-        WarningUI.Enabled = true
-        Reason_2.Visible = true
+        WarningUI.Enabled = false
+        Reason_2.Visible = false
         return
     end
 end
@@ -327,8 +327,8 @@ end
 local PostMessage = require(ChatMain).MessagePosted
 
 if not PostMessage then
-    WarningUI.Enabled = true
-    Reason_3.Visible = true
+    WarningUI.Enabled = false
+    Reason_3.Visible = false
     return
 end
 
@@ -466,5 +466,5 @@ if CoreHook then
 end
 setreadonly(Metatable, true)
 
-Notify(NotificationTitle, "Anti Chat & Screenshot Logger Loaded!", 4)
-print(string.format("Cbb's Anti Chat-Logger has loaded in %s seconds.", string.format("%.2f", tostring(tick() - ACL_LoadTime))))
+Notify(NotificationTitle, "Loaded successfully.", 15)
+print(string.format("Anti-ban loaded in %s seconds.", string.format("%.2f", tostring(tick() - ACL_LoadTime))))
